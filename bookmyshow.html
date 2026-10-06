@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book My Show</title>
+     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+ <link rel="icon" type="image/png" href="bms.png" />
+ <style>
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.body {
+    background-color: white;
+}
+.nav{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+}
+.nav img{
+    margin: 0;
+    width: 125px;
+    margin-left: 60px;
+}
+ .search-box{
+    width:650px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    border:1px solid #ddd;
+    border-radius:6px;
+    padding:0 15px;
+    margin-top: 40px;
+}
+.search-box i{
+    color:gray;
+    font-size:18px;
+}
+
+.search-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    font-size:16px;
+    padding-left:10px;
+}
+
+ #location{
+    margin-left: 200px;
+    border:none;         
+    outline:none;         
+    background:transparent;
+    font-size:16px;
+    cursor:pointer;
+}
+.nav button{
+    margin-top: 50px;
+    width: 80px;
+    height: 30px;
+    background-color: rgb(241, 75, 75);
+    border: none;
+    cursor: pointer;
+    border-radius: 5%;
+}
+.nav button a{
+    text-decoration: none;
+    color: white;
+}
+.nav button :hover{
+    color: white;
+}
+.menu{
+    margin-top: 55px;
+    cursor:pointer;
+}
+.home{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.home ul{
+   display: flex;
+   gap: 20px;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   margin-left: 5%;
+}
+.home a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+
+}
+.home_2 ul{
+   display: flex;
+   gap: 20px;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   margin-left: 150%;
+}
+.banner-1{
+    width: 100%;
+    height: 280px;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aquamarine; */
+}
+.banner-1 img{
+    width: 94%;
+    height: 50vh;
+    border-radius: 10px;
+    /* align-items: center; */
+}
+.movies{
+    margin-bottom: 50px;
+    width: 100%;
+    /* height: auto; */
+}
+.movies h2{
+    margin-left: 20px;
+    padding: 2%;color:
+     rgb(63, 60, 60);
+}
+.movie-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* padding: 10px; */
+    /* margin-bottom: 180px; */
+}
+.movie-poster{
+    width: 220px;
+    /* height: auto; */
+    /* background-color: black; */
+    border-radius: 5%;
+}
+.movie-poster img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5%;
+}
+.movie-poster p{
+    margin-left: 10%;
+    /* height: 10%; */
+    color: rgb(212, 19, 19);
+    /* background-color: black; */
+    border-radius: 5%;
+}
+.fa-thumbs-up{
+    color: #0bf403;
+}
+.fa-star{
+    color: gold;
+}
+.rating h3{
+    text-align:start;
+    padding: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(63, 60, 60);
+}
+.rating p{
+    text-align: start;
+    margin-left: 9px;
+    color: gray;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.rating button{
+    width: 100%;
+    height: 30px;
+    font-size: 90%;
+    background-color: rgb(241, 75, 75);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: 900;
+    transition: 0.2s ease-in;
+}
+.rating button a{
+    text-decoration: none;
+    color: white;
+}
+.rating button:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+.banner-2{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.banner-2 img{
+    margin: 5%;
+    width: 1200px;
+    height: 140px;
+}
+.events{
+    width: 100%;
+    height: auto;
+}
+.head h2 {
+    margin-left: 4%;
+}
+.event-background{
+    display: flex;
+    justify-content: space-evenly;
+}
+.event-poster{
+    /* align-items: center; */
+    width: 220px;
+    height: 220px;
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    border-radius: 10px;
+}
+.event-poster img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    /* object-fit: fill; */
+}
+.Premiere{
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    background-color: #2B3149;
+}
+.premiere-head{
+    margin: 3%;
+}
+.premiere-head h3{
+    font-size: 30px;
+    color: burlywood;
+}
+.premiere-head i{
+    padding-right: 10px;
+    color: brown;
+    font-size: 40px;
+}
+.premiere-head p{
+    color: white;
+}
+.premiere-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.premiere-cards{
+    width: 220px;
+    height: 300px;
+    /* border-radius: 5%; */
+    /* background-color: blueviolet; */
+    margin-bottom: 10%;
+}
+.premiere-cards img{
+    width: 100%;
+    /* height: 320px; */
+    border-radius: 10px;
+    object-fit: cover;
+}
+.premiere-cards h3, 
+.premiere-cards h4{
+    color: white;
+    padding: 5px;
+}
+.plays{
+    margin-top: 30px;
+}
+.music_studio{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+.music{
+    width: 220px;
+    height: 300px;
+    margin-bottom: 10%;
+}
+.music h3{
+    color: rgb(63, 60, 60);
+}
+.music p{
+    color: grey;
+}
+.music img{
+    width: 100%;
+    /* height: 320px; */
+    border-radius: 10px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+.outdoor-events{
+    margin-top: 50px;
+}
+.outdoor{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.outdoor-head{
+    padding: 25px;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.outdoor-img{
+    width: 230px;
+    height: 370px;
+    /* background-color: #2B3149; */
+    border-radius: 5%;
+}
+.outdoor-img h3{
+    padding: 5px;
+    color: rgb(63, 60, 60);
+}
+.outdoor-img p {
+    padding: 5px;
+    color: grey;
+}
+.outdoor-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.outdoor-img img:hover{
+    transform: translatey(-10px);
+}
+.Laughter-Therapy{
+    margin-top: 110px;
+}
+.Laughter-head{
+    padding: 25px;
+    margin-left: 85px;
+    font-size: 20px;
+}
+.Laughter{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Laughter-cards{
+    width: 220px;
+    height: 370px;
+    border-radius: 5%;
+}
+.Laughter-cards h3{
+    color: rgb(63, 60, 60);
+}
+.Laughter-cards h4{
+    color: gray;
+}
+.Laughter-cards img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    border-radius: 10px;
+}
+.popular-sports{
+    margin-top: 130px;
+}
+.sports-head{
+    padding: 25px;
+    margin-left: 85px;
+    font-size: 20px;
+}
+.sports-head{
+    margin-left: 17px;
+}
+.sports-card h3{
+   color:  rgb(63, 60, 60);
+}
+.sports-card h4{
+    padding: 10px;
+    /* margin-bottom: 100px; */
+    color: grey;
+}
+.sports{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sports-card{
+    width: 220px;
+    height: 370px;
+    background-color: rgba(0, 0, 0, 0.804);
+    border-radius: 5%;
+}
+.sports-card img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    border-radius: 10px;
+}
+.footer{
+    margin-top: 130px;
+}
+.footer-head img{
+    margin-top: 30px;
+    width: 100px;
+    height: 40px;
+    /* width: 110px; */
+    /* height: 110px; */
+}
+.footer-head{
+    align-items: center;
+    justify-content: center;
+    /* display: flex; */
+    /* display: block; */
+    text-align: center;
+}
+.footer-services{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #6a6868fd;
+    padding: 25px 0;
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #d9d9d9;
+}
+
+.service i{
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.service p{
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer-section h3{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: azure;
+}
+.footer-section li{
+    padding: 10px;
+    list-style-type: none;
+    color: rgb(230, 227, 227);
+    cursor: pointer;
+}
+.footer-section a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-section p{
+    padding: 10px;
+    color: rgb(230, 227, 227);
+    cursor: pointer;
+}
+.follow-us h3{
+    margin: 20px;
+    text-align: center;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    gap: 20px;
+    /* padding-bottom: 30px; */  
+}
+.social-icons i{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #555;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* color: white; */
+    cursor: pointer;
+    transition: 0.3s;
+}
+.social-icons a{
+    text-decoration: none;
+    color: black;
+}
+.social-icons i:hover{
+    background-color: white;
+}
+.footer{
+    background-color: #3b3b3b;
+}
+/* .foot{
+    text-align: center;
+    padding: 40px; */
+/* } */
+.foot-line h6 h5{
+   color: white;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 600px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    .nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .nav img {
+        width: 100px;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .search-box {
+        width: 100%;
+        height: 40px;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+
+    #location {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    .nav button {
+        margin-top: 5px;
+        width: 70px;
+    }
+
+    .menu {
+        margin-top: 10px;
+        font-size: 22px;
+    }
+
+
+    /* MENU */
+    .home {
+        width: 100%;
+        height: auto;
+        overflow-x: auto;
+    }
+
+    .home ul {
+        gap: 15px;
+        margin-left: 10px;
+        padding: 10px 0;
+        white-space: nowrap;
+    }
+
+    .home_2 {
+        display: none;
+    }
+
+
+    /* BANNER */
+    .banner-1 {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .banner-1 img {
+        width: 95%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+
+    /* MOVIES */
+    .movies h2 {
+        font-size: 20px;
+        margin-left: 5px;
+    }
+
+    .movie-section {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .movie-poster {
+        min-width: 150px;
+        width: 150px;
+    }
+
+    .movie-poster img {
+        height: 230px;
+    }
+
+
+    /* BANNER 2 */
+    .banner-2 {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .banner-2 img {
+        width: 90%;
+        height: 80px;
+        object-fit: cover;
+        margin: 5%;
+    }
+
+
+    /* EVENTS */
+    .head h2 {
+        font-size: 20px;
+        margin-left: 15px;
+    }
+
+    .event-background {
+        display: flex;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .event-poster {
+        min-width: 160px;
+        width: 160px;
+        height: 180px;
+    }
+
+
+    /* PREMIERE */
+    .premiere-head {
+        margin: 20px;
+    }
+
+    .premiere-head h3 {
+        font-size: 24px;
+    }
+
+    .premiere-head i {
+        font-size: 30px;
+    }
+
+    .premiere-content {
+        display: flex;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .premiere-cards {
+        min-width: 160px;
+        width: 160px;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+
+    /* MUSIC */
+    .music_studio {
+        display: flex;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .music {
+        min-width: 170px;
+        width: 170px;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .music img {
+        height: 230px;
+    }
+
+
+    /* OUTDOOR EVENTS */
+    .outdoor-head {
+        padding: 15px;
+        margin-left: 5px;
+    }
+
+    .outdoor {
+        display: flex;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .outdoor-img {
+        min-width: 170px;
+        width: 170px;
+        height: 280px;
+    }
+
+
+    /* LAUGHTER THERAPY */
+    .Laughter-Therapy {
+        margin-top: 50px;
+    }
+
+    .Laughter-head {
+        padding: 15px;
+        margin-left: 5px;
+        font-size: 18px;
+    }
+
+    .Laughter {
+        display: flex;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .Laughter-cards {
+        min-width: 170px;
+        width: 170px;
+        height: 280px;
+    }
+
+
+    /* SPORTS / ACTIVITIES */
+    .popular-sports {
+        margin-top: 50px;
+    }
+
+    .sports-head {
+        padding: 15px;
+        margin-left: 5px;
+        font-size: 18px;
+    }
+
+    .sports {
+        display: flex;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .sports-card {
+        min-width: 170px;
+        width: 170px;
+        height: 280px;
+    }
+
+
+    /* FOOTER */
+    .footer {
+        margin-top: 60px;
+    }
+
+    .footer-services {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px 10px;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .footer-section {
+        width: 100%;
+    }
+
+    .footer-section h3 {
+        margin-top: 10px;
+    }
+
+    .follow-us h3 {
+        margin: 15px;
+    }
+
+    .social-icons {
+        gap: 12px;
+        padding-bottom: 20px;
+    }
+
+    .foot {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .foot p {
+        font-size: 12px;
+    }
+}
+ </style>
+</head>
+<body>
+     <section id="home">
+      <div class="nav">
+        <img src="./images/bookmyshow-logo_brandlogos.net_rzqea.png"
+          alt="BookMyShow Logo"
+        />
+        <div class="search-box">
+          <i class="fa fa-search"></i>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search for Movies, Events, Plays, Sports and Activities"
+          />
+        </div>
+        <select name="0" id="location" value="1">
+          <option value="">Chennai</option>
+          <option value="">Kerala</option>
+          <option value="">Karnataka</option>
+          <option value="">Hydrabad</option>
+          <option value="">Mumbai</option>
+          <option value="">Delhi</option>
+        </select>
+
+        <button> <a href="singin/signin.html">Sign In</a></button>
+        <i class="fa fa-bars menu"></i>
+      </div>
+    </section>
+
+    <section>
+
+      <div class="home">
+        <ul>
+          <li> <a href="#movies">Movies</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#premiere">Premiere</a></li>
+          <li><a href="#plays">Plays</a></li>
+          <li><a href="#sports">Sports</a></li>
+          <li><a href="#offers">Offers</a></li>
+        </ul>
+        <div class="home_2">
+           <ul>
+          <li> <a href="#ListYourShows">ListYourShows</a></li>
+          <li><a href="#corparates">Corparates</a></li>
+          <li><a href="#offers">Offers</a></li>
+          <li><a href="#giftcards">GiftCards</a></li>
+         
+          </ul>
+        </div>
+      </div>
+
+
+    </section>
+
+     <section>
+
+      <div class="banner-1">
+        <img src="./images/banner.jpg" alt="" />
+      </div>
+
+    </section>
+    
+
+    <section id="movies">
+
+      <div class="movies">
+        <div>
+          <h2>Recommended Movies</h2>
+        </div>
+        <div class="movie-section">
+
+          <div class="movie-poster">
+          <a href="movies.html"> <img src="./images/10001.jpg" alt="movie 1" /></a>
+            <div class="rating">
+              <h3>mandadi</h3>
+              <p>Action/Drama/Sports</p>
+          </div>
+          </div>
+
+          <div class="movie-poster">
+            <a href="sardar 2.jpg"><img src="./images/sardar 2.jpg" alt="movie 2" /></a>
+            <div class="rating">
+              <h3>sardar 2</h3>
+              <p>Action/Thriller</p>
+          </div>
+          </div>
+
+          <div class="movie-poster">
+            <img src="./images/10001 (1).jpg" alt="movie 3" />
+            <div class="rating">
+              <h3>immortal</h3>
+              <p>Fantasy/Horror </p>
+          </div>
+        </div>
+
+          <div class="movie-poster">
+            <img src="./images/VIBE.jpg" alt="movie 4" />
+            <div class="rating">
+              <h3>VIBE</h3>
+              <p>Action/Comedy</p>
+          </div>
+          </div>
+
+          <div class="movie-poster">
+            <img src="./images/enna vilai.jpg" alt="movie 5" />
+            <div class="rating">
+              <h3>Enna Vilai</h3>
+              <p>Drama/social/Thriller </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <div class="banner-2">
+        <img src="./images/stream.png" alt="banner 2" />
+      </div>
+    </section>
+
+    <section id="events">
+
+      <div class="events">
+        <div class="head">
+          <h2> The Besst Of Live Events</h2>
+        </div>
+        <div class="event-background">
+          <div class="event-poster">
+            <img src="./images/event1.png" alt="comedy" />
+          </div>
+          <div class="event-poster">
+            <img src="./images/event2.png" alt="singing" />
+          </div>
+          <div class="event-poster">
+            <img src="./images/event3.png" alt="theater show" />
+          </div>
+          <div class="event-poster">
+            <img src="./images/event4.jpeg" alt="kids" />
+          </div>
+           <div class="event-poster">
+            <img src="./images/event5.jpeg" alt="kids" />
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="premiere">
+
+      <div class="Premiere">
+        <div class="premiere-head">
+          <h3><i class="fa fa-play-circle-o"></i>PREMIERE</h3>
+          <p>Brand New Releases Every Friday</p>
+        </div>
+
+        <div class="premiere-content">
+          <div class="premiere-cards">
+            <img src="./images/premier1.jpg" alt="premiere 1" /></a>
+            <h3>Gotti</h3>
+            <h4>English</h4>
+            
+          </div>
+          <div class="premiere-cards">
+            <img src="./images/premier2.jpg" alt="premiere 2" />
+            <h3>The Orphans</h3>
+            <h4>French</h4>
+          </div>
+          <div class="premiere-cards">
+            <img src="./images/premier3.jpg" alt="premiere 3" />
+            <h3>Hen</h3>
+            <h4>Greek</h4>
+          </div>
+          <div class="premiere-cards">
+            <img src="./images/premier4.jpg" alt="premiere 4" />
+            <h3>Baby Doe</h3>
+            <h4>English</h4>
+          </div>
+          <div class="premiere-cards">
+            <img src="./images/premier5.jpg" alt="premiere 5" />
+            <h3>The Bodygaurd</h3>
+            <h4>English</h4>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    
+    <section id="plays">
+      <div class="plays">
+      <div class="head">
+          <h2> Your Music Studios</h2>
+        </div>
+         <div class="music_studio">
+          
+          <div class="music">
+            <img src="./images/studio1.jpg" alt="premiere 1" /></a>
+            <h3>Yuvan Sankar Raja Live in Concert - Salem</h3>
+            <p>Action / Thriller</p>
+            
+          </div>
+          <div class="music">
+            <img src="./images/studio2.jpg" alt="premiere 2" />
+            <h3>SunBurn Arena ft.DJ Snake</h3>
+            <p>NIVE Grounds: Begalore Concerts</p>
+          </div>
+          <div class="music">
+            <img src="./images/studio3.jpg" alt="premiere 3" />
+            <h3>Guns N' Roses: India 2026 Guwahati</h3>
+            <p>Khanapara Veterinary Ground: Guwahati</p>
+          </div>
+          <div class="music">
+            <img src="./images/studio4.jpg" alt="premiere 4" />
+            <h3>ANYMA Present AEDEM - Mumbai</h3>
+            <p>Sports / Drama</p>
+          </div>
+          <div class="music">
+            <img src="./images/studio5.jpg" alt="premiere 5" />
+            <h3>Lollapalooza India 2027</h3>
+            <p>Mahalaxmi Race Course: Mumbai Concert</p>
+          </div>
+        </div>
+     
+    </section>
+
+    <section id="outdoor">
+
+      <div class="outdoor-events">
+
+        <div class="outdoor-head">
+          <h3>Outdoor Events</h3>
+        </div>
+        <div class="outdoor">
+          <div class="outdoor-img">
+          <img src="./images/outdoor1.jpg" alt="outdoor-event 1" /></a>
+            <h3>JUMBO CIRCUS</h3>
+            <p>CPED Ground: Belgaum</p>
+          </div>
+          <div class="outdoor-img">
+            <img src="./images/outdoor2.jpg" alt="outdoor-event 2" />
+            <h3>Entartica Sea World Coimbatore</h3>
+            <p>Entartica Sea World: Coimbatore</p>
+          </div>
+          <div class="outdoor-img">
+            <img src="./images/outdoor3.jpg" alt="outdoor-event 3" />
+            <h3>ROAR ON WHEELS Season 1</h3>
+            <p>DMC-KVP GROUNDS: Salem</p>
+          </div>
+          <div class="outdoor-img">
+            <img src="./images/outdoor4.jpg" alt="outdoor-event 4" />
+            <h3>Keinemusik Presents Adam port - Bangalore</h3>
+            <p>Island Grounds, Chennai</p>
+          </div>
+          <div class="outdoor-img">
+            <img src="./images/outdoor5.jpg" alt="outdoor-event 5" />
+            <h3>Sky Jumber Trampoline Park - Chennai</h3>
+            <p>Sky Jumber Trampoline Park - Chennai</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <div class="Laughter-Therapy">
+        <div class="Laughter-head">
+          <h3>Laughter Therapy</h3>
+        </div>
+        <div class="Laughter">
+          <div class="Laughter-cards">
+           <img src="./images/laugher1.jpg" alt="" /></a>
+           <h3>OML Comedy Pit Stop</h3>
+           <h4>Multiple Venues</h4>
+          </div>
+          <div class="Laughter-cards">
+            <img src="./images/laugher2.jpg" alt="" />
+            <h3>Chalta Hai Comedy</h3>
+            <h4>Multiple Venues</h4>
+          </div>
+          <div class="Laughter-cards">
+            <img src="./images/laugher3.jpg" alt="" />
+            <h3>Kisi Ko Batana Mat Ft. Anubhav Singh Bassi</h3>
+            <h4>Labh Mandapam (Abhay Prashal): Indore</h4>
+          </div>
+           <div class="Laughter-cards">
+            <img src="./images/laugher4.jpg" alt="" />
+            <h3>Naanum Foodie Dhaan by Praveen Kumar</h3>
+            <h4>Hotel Ashwa Park: Salem</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sports">
+      <div class="popular-sports">
+        <div class="sports-head">
+          <h3>Popular Events</h3>
+        </div>
+        <div class="sports">
+          <div class="sports-card">
+            <img src="./images/popular1.jpg" alt="" /></a>
+            <h3>Foo Fighters India Tour 2027 - Bengaluru</h3>
+            <h4>Bengaluru LIVE, Bengaluru</h4>
+          </div>
+          <div class="sports-card">
+            <img src="./images/popular2.jpg" alt="" />
+            <h3>Bismil Ki Mehfil - India Tour</h3>
+            <h4>Multiple Venues</h4>
+          </div>
+          <div class="sports-card">
+            <img src="./images/popular3.jpg" alt="" />
+            <h3>Guns N' Roses: India 2026-Bengaluru</h3>
+            <h4>NICE Grounds: Bengaluru</h4>
+          </div>
+          <div class="sports-card">
+            <img src="./images/popular4.jpg" alt="" />
+            <h3>Magic Beans Online Kids Workshops</h3>
+            <h4>Multiple Venues</h4>
+          </div>
+           <div class="sports-card">
+            <img src="./images/popular5.jpg" alt="" />
+            <h3>Foo Fighters India Tour 2027</h3>
+            <h4>Multiple Venues</h4>
+          </div>
+        </div>
+      </div>
+      <br />
+    </section>
+
+    <section id="sports">
+      <div class="popular-sports">
+        <div class="sports-head">
+          <h3>Explore Fun Activities</h3>
+        </div>
+        <div class="sports">
+          <div class="sports-card">
+            <img src="./images/activities1.jpg" alt="" /></a>
+            <h3>Jawaharlal Nehru Planetarium,Bengalure</h3>
+            <h4>Jawaharlal Nehru Planetarium, Bengalure</h4>
+          </div>
+          <div class="sports-card">
+            <img src="./images/activities2.jpg" alt="" />
+            <h3>Imagicaa Theme Park</h3>
+            <h4>Imagicaa Theme Park (Khopoli): Mumbai</h4>
+          </div>
+          <div class="sports-card">
+            <img src="./images/activities3.jpg" alt="" />
+            <h3>Pradhanmantri Sangrahalaya</h3>
+            <h4>Pradhanmantri Sangrahalaya: Delhi</h4>
+          </div>
+          <div class="sports-card">
+            <img src="./images/activities4.jpg" alt="" />
+            <h3>Statue of Belief</h3>
+            <h4>Statue Of Belief: Nathdwara</h4>
+          </div>
+           <div class="sports-card">
+            <img src="./images/activities5.jpg" alt="" />
+            <h3>Salar Jung Museum Visit</h3>
+            <h4>Salar Jung Museum: Hyderabad</h4>
+          </div>
+        </div>
+      </div>
+      <br />
+    </section>
+
+    <section>
+      <footer>
+        <div class="footer">
+          <div class="footer-head">
+            <img src="./images/book my show logo 2.png" alt="BookMyShow Logo" />
+            <p>
+              Your one-stop destination for movies, events, sports, and
+              entertainment.
+            </p>
+            <br />
+          </div>
+          <div class="footer-services">
+            <div class="service">
+              <i class="fa fa-user-circle-o"></i>
+              <p>24/7 CUSTOMER CARE</p>
+            </div>
+
+            <div class="service">
+              <i class="fa fa-ticket"></i>
+              <p>RESEND BOOKING CONFIRMATION</p>
+            </div>
+
+            <div class="service">
+              <i class="fa fa-envelope-o"></i>
+              <p>SUBSCRIBE TO THE NEWSLETTER</p>
+            </div>
+          </div>
+
+          
+          <div class="footer-content">
+            <div class="footer-section">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#sports">Sports</a></li>
+                <li><a href="#offers">Offers</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h3>Support</h3>
+              <ul>
+                <a href="helpcenter.html"><li>Help Center</li></a>
+                <li>Contact Us</li>
+                <a href="privacy.html"><li>Privacy Policy</li></a>
+                <a href="condition.html"><li>Terms & Conditions</li></a>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h3>Contact</h3>
+              <p>Email: support@bookmyshowclone.com</p>
+              <p>Phone: +91 98765 43210</p>
+              <p>Chennai, India</p>
+            </div>
+          </div>
+          <div class="follow-us">
+            <hr />
+            <h3>follow us</h3>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/BookMyShow/" target="_blank">
+              <i class="fa fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/company/bookmyshow/" target="_blank">
+                <i class="fa fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/bookmyshowin/" target="_blank">
+                <i class="fa fa-instagram"></i></a>
+              <a href="https://x.com/BookMyShow" target="_blank">
+                <i class="fa fa-twitter"></i></a>
+              <a href="https://in.pinterest.com/bookmyshow/" target="_blank">
+                <i class="fa fa-pinterest"></i></a>
+            </div>
+          </div>
+          <div class="foot">
+            <p>
+              © 2026 BookMyShow Clone. Created for educational purposes only.
+              All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+
+    
+</body>
+</html>
